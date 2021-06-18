@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include "ranklist.h"
 #include <QStackedWidget>
 #include <QMessageBox>
 #include <QDebug>
@@ -64,6 +65,7 @@ void Menu::closeEvent(QCloseEvent *event) {
 
 void Menu::on_buttonRank_clicked()
 {
-    // unfinished
-    return ;
+    Ranklist = new ranklist(this);
+    Ranklist->setFixedSize(Ranklist->width(), Ranklist->height());
+    Ranklist->show();
 }
